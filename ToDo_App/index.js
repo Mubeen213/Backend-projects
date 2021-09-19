@@ -7,7 +7,9 @@ app.set('view engine' , 'ejs');
 app.set('views','./views');
 // include routes
 app.use('/',require('./routes'));
-
+app.use(express.static('./assets'));
+// require the db
+const db = require('./config/mongoose');
 app.listen(port,function(err){
 
   if(err){
