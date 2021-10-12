@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;1,400&display=swap');
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins',sans-serif;
+}
+header{
+  text-align: center;
+}
+
+/*add button*/
+.open{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#open,#dlt-btn{
+  padding: 18px 60px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: none;
+  font-size:20px;
+  color: #fff;
+}
+.margin{
+  margin-bottom:70px;
+  height: 20px;
+  width: 100%;
+}
+#dlt-btn{
+  position: absolute;
+  right: 20%;
+  top:12%;
+}
+#open{
+  background-color: green;
+}
+#dlt-btn{
+  background-color: red;
+}
+
+.wrapper{
+position: absolute;
+left: 0;
+top: 0;
+padding: 20px;
+height: 100vh;
+width: 100vw;
+background-color: rgba(0,0,0,0.3);
+display: flex;
+align-items: center;
+justify-content: center;
+opacity: 0;
+display: none;
+pointer-events: none;
+}
+
+/* class that will be added using javascript*/
+.wrapper.show{
+  opacity: 1;
+  display: block;
+  z-index: 1;
+  pointer-events: auto;
+}
+.close{
+  margin-left: auto;
+ padding: 4px;
+}
+.close .fa-window-close{
+  color: red;
+  background-color: #fff;
+}
+.create{
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  padding: 30px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.create label{
+  font-size:18px;
+  margin-bottom: 10px;
+}
+.create input,select{
+  padding:6px;
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+#description{
+ height: 10vh;
+}
+
+.create input:focus{
+  outline: none;
+}
+
+#submit{
+  padding: 20px 36px;
+  width: 100%;
+  font-size:20px;
+  border: none;
+  border-radius:8px;
+  background-color: green;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+/* tasks containers*/
+.task-container{
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  
+}
+.task{
+  box-shadow:0  4px 6px rgba(0,0,0,0.5);
+  width: 300px;
+  margin: 20px;
+  padding: 10px;
+}
+form input[type="checkbox"]{
+  padding: 6px;
+}
+
+@media(max-width:720px){
+  #dlt-btn{
+    position: absolute;
+    right: 26%;
+    top:27%;
+  }
+}
