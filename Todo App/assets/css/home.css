@@ -44,6 +44,7 @@ header{
   background-color: red;
 }
 
+/* wrapper class that hides the form */
 .wrapper{
 position: absolute;
 left: 0;
@@ -75,6 +76,8 @@ pointer-events: none;
   color: red;
   background-color: #fff;
 }
+
+/* form that accepts all the details */
 .create{
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);

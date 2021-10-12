@@ -5,12 +5,15 @@ const path = require('path');
 const db = require('./config/mongoose');
 const Contact = require('./models/contact');
 const app = express();
+
 //set view engine
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
+
 //to use static files
 app.use(express.static('assets'));
-//to read inputs from form
+
+//to read inputs from browser
 app.use(express.urlencoded());
 
 //populating the db
